@@ -1,0 +1,40 @@
+.body {
+  width: 100%;
+  padding: 0;
+  margin: 20px;
+}
+
+.recipe_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 17px;
+  padding: 23px 0px 23px 23px;
+  margin: 2px;
+  margin-top: 60px;
+}
+
+.grid_item {
+  text-align: center;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 20px;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+.food_images {
+  width: 250px;
+  height: 160px;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+.details_body {
+  width: 55%;
+  display: flex;
+  padding: 8px;
+  font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
+  color: #ffffff;
+}

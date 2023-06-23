@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>RecipeApp: Your Recipes</title>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/styles.css' %}" />
+  <style type="text/css">
+    body {
+      background: url("{% static 'recipes/images/main-background.jpg' %}") no-repeat fixed;
+      background-size: cover;
+    }
+
+    h1,
+    h3 {
+      color: #d6d6d6;
+      font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav-bar"></div>
+  <div class="recipe_grid">
+    {% for object in object_list %}
+    <div class="grid_item">
+      <h3>
+        <a class="recipe_name" href="{{object.get_absolute_url}}">
+          {{object.name}}
+        </a>
+      </h3>
+      <img class="food_images" src="{{object.pic.url}}" />
+    </div>
+    {% endfor %}
+  </div>
+</body>
+
+</html>
