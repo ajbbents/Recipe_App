@@ -5,34 +5,39 @@
 <head>
   <title>RecipeApp: Your Recipes</title>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/styles.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'recipes\css\styles.css' %}">
   <style type="text/css">
     body {
       background: url("{% static 'recipes/images/main-background.jpg' %}") no-repeat fixed;
       background-size: cover;
     }
-
-    h1,
-    h3 {
-      color: #d6d6d6;
-      font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
-      text-align: center;
-    }
   </style>
 </head>
 
-<body>
-
-  <h3>Details: {{object.name}}</h3>
-  <div class="details_body">
-    <b>Name: </b> {{object.name}} <br>
-    <b>Description: </b> {{object.description}} <br>
-    <b>Cooking Time: </b> {{object.cooking_time}} <br>
-    <b>Difficulty: </b> {{object.difficulty}} <br>
-    <b>Ingredients: </b> {{object.ingredients}} <br>
+<body class="details_body">
+  <div class="nav-bar"></div>
+  <div class="details_modal">
+    <h2>{{object.name}}</h2>
     <img class="food_images" src="{{object.pic.url}}" />
-  </div>
+    <div class="details_body">
+      <div class="details_short">
+        <b>Name: </b> {{object.name}} <br />
+        <b>Description: </b> {{object.description}} <br />
+        <b>Cooking Time: </b> {{object.cooking_time}} <br />
+        <b>Difficulty: </b> {{object.calculate_difficulty}} <br />
+        <b>Ingredients: </b> {{object.ingredients}} <br />
+      </div>
+      <div class="details_long">
+        <button onclick="goBack()" class="login_btn">Back</button>
+      </div>
+    </div>
 
+  </div>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
 </body>
 
 </html>
