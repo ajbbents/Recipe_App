@@ -7,7 +7,7 @@ from .models import Recipe
 class RecipeModelTest(TestCase):
     def setUpTestData():
         Recipe.objects.create(name='Tea', cooking_time='3',
-                              difficulty='Easy', ingredients='Water, Tea Leaves')
+                              ingredients='Water, Tea Leaves')
 
     def test_recipe_name_length(self):
         recipe = Recipe.objects.get(id=1)
@@ -24,12 +24,15 @@ class RecipeModelTest(TestCase):
         recipe_cooking_time = recipe.cooking_time
         self.assertEqual(recipe_cooking_time, 3)
 
-    def test_difficulty_length(self):
-        recipe = Recipe.objects.get(id=1)
-        max_difficulty_length = recipe._meta.get_field('difficulty').max_length
-        self.assertEqual(max_difficulty_length, 20)
-
     def test_ingredients_list(self):
         recipe = Recipe.objects.get(id=1)
         recipe_ingredients = recipe.ingredients
         self.assertEqual(recipe_ingredients, 'Water, Tea Leaves')
+
+    def test_get_absolute_url(self):
+        recipe = Recipe.objects.get(id=1)
+        self.assertEqual(recipe.get_absolute_url(), '/list/1')
+
+    def test_difficulty_calculation(self):
+        recipe = Recipe.objects.get(id=1)
+        self.assertEqual(recipe.calculate_difficulty(), 'Easy')
