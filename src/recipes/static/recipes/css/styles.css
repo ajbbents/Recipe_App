@@ -8,9 +8,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 17px;
-  padding: 23px 0px 23px 23px;
+  padding: 23px 23px 23px 23px;
   margin: 2px;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .grid_item {
@@ -19,8 +19,8 @@
   color: #000000;
   border-radius: 20px;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
@@ -45,31 +45,33 @@
   box-shadow: 1px 1px 1px #5c5c5c;
   margin: 0 auto;
   font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
+  font-size: 16px;
   text-align: center;
   justify-content: center;
 }
 
 .details_body {
   display: flex;
-  margin-top: 20px;
+  flex-direction: row;
+  margin: 12px;
 }
 
 .details_short {
-  flex: 1;
   padding: 8px;
-  text-align: center;
-  margin-top: 20px;
+  text-align: left;
+  text-justify: center;
+  margin: 12px;
 }
 
 .details_long {
-  display: flex;
-  justify-content: flex-end;
   padding: 8px;
+  margin-top: 35px;
+
 }
 
 h1,
 h3 {
-  color: #d6d6d6;
+  color: #ffffff;
   font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
   text-align: center;
 }
@@ -82,8 +84,59 @@ h2 {
 
 .login_btn {
   font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
+  background-color: darkolivegreen;
   padding: 10px;
   text-align: center;
   border-radius: 10px;
+  border: 2px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 25px;
+  color: #ffffff;
+  font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+}
+
+.nav_bar {
+  width: 95vw;
+  height: 4vh;
+  margin: 0 auto;
+  margin-bottom: 2px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.success_block {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(94, 94, 94, 0.418);
+  border-radius: 10px;
+  padding: 25px;
+  color: #ffffff;
+  font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+}
+
+.login_again_btn {
+  font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  background-color: darkolivegreen;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }

@@ -14,8 +14,11 @@
   </style>
 </head>
 
-<body class="details_body">
-  <div class="nav-bar"></div>
+<body>
+  <div class="nav_bar">
+    <a class="login_btn" href="{%url 'logout' %}">Logout</a>
+  </div>
+
   <div class="details_modal">
     <h2>{{object.name}}</h2>
     <img class="food_images" src="{{object.pic.url}}" />
@@ -28,7 +31,8 @@
         <b>Ingredients: </b> {{object.ingredients}} <br />
       </div>
       <div class="details_long">
-        <button onclick="goBack()" class="login_btn">Back</button>
+        <a href="{% url 'recipes:list' %}" class="login_btn">Back</a>
+        <!-- <button onclick="goBack()" class="login_btn">Back</button> -->
       </div>
     </div>
 

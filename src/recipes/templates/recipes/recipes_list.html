@@ -22,7 +22,9 @@
 </head>
 
 <body>
-  <div class="nav-bar"></div>
+  <div class="nav_bar">
+    <a class="login_btn" href="{%url 'logout' %}">Logout</a>
+  </div>
   <div class="recipe_grid">
     {% for object in object_list %}
     <div class="grid_item">

@@ -5,8 +5,8 @@
 <head>
   <title>RecipeApp Recipes</title>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-  <link rel='stylesheet' type='text/css' href="{% static 'recipes/css/styles.css' %}">
   <title>Recipe Home</title>
+  <link rel='stylesheet' type='text/css' href="{% static 'recipes/css/styles.css' %}">
   <style type="text/css">
     body {
       background: url("{% static 'recipes/images/home-background.jpg' %}") no-repeat fixed;
@@ -30,7 +30,10 @@
 <body>
   <div class="success_block">
     <h1>RecipeApp: your home for your next meal</h1>
-    <h3><a href="{% url 'login' %}" class="login_again_btn">Login</a></h3>
+    <h3>Successfully logged out.</h3>
+    <br>
+    <br>
+    <a class="login_again_btn" href="{%url 'login' %}">Login again?</a>
   </div>
 </body>
 
