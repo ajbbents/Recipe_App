@@ -24,6 +24,8 @@
 <body>
   <div class="nav_bar">
     <a class="login_btn" href="{%url 'logout' %}">Logout</a>
+    <a class="login_btn" href="{%url 'recipes:search' %}">Search</a>
+    <a class="login_btn" href="{%url 'recipes:list' %}">Recipes</a>
   </div>
   <div class="recipe_grid">
     {% for object in object_list %}
