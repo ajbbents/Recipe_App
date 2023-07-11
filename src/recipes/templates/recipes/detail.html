@@ -17,10 +17,11 @@
 <body>
   <div class="nav_bar">
     <a class="login_btn" href="{%url 'logout' %}">Logout</a>
+    <a class="login_btn" href="{%url 'recipes:about' %}">About</a>
     <a class="login_btn" href="{%url 'recipes:search' %}">Search</a>
+    <a class="login_btn" href="{%url 'recipes:create' %}">Create</a>
     <a class="login_btn" href="{%url 'recipes:list' %}">Recipes</a>
   </div>
-
   <div class="details_modal">
     <h2>{{object.name}}</h2>
     <img class="food_images" src="{{object.pic.url}}" />

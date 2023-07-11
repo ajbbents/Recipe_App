@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>RecipeApp Recipes</title>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' type='text/css' href="{% static 'recipes/css/styles.css' %}">
+  <title>Recipe Home</title>
+  <style type="text/css">
+    body {
+      background: url("{% static 'recipes/images/home-background.jpg' %}") no-repeat fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 52vh;
+      padding: 3px;
+    }
+
+    h1,
+    h3 {
+      color: #d6d6d6;
+      font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav_bar">
+    <a class="login_btn" href="{%url 'logout' %}">Logout</a>
+    <a class="login_btn" href="{%url 'recipes:about' %}">About</a>
+    <a class="login_btn" href="{%url 'recipes:search' %}">Search</a>
+    <a class="login_btn" href="{%url 'recipes:create' %}">Create</a>
+    <a class="login_btn" href="{%url 'recipes:list' %}">Recipes</a>
+  </div>
+  <div class="success_block">
+    <h1>RecipeApp: your home for your next meal</h1>
+    <p>RecipeApp is a fun little recipe-gathering app, created with Django and Python, hosted on Heroku. Let's get
+      cooking!</p>
+    <h3>A quick word from Alison:</h3>
+    <p>I love being able to take a piece of software and make it run more smoothly, effectively and beautifully. I can't
+      wait to join your team.</p>
+    <div class="about_btns">
+      <div class="details_long">
+        <a href="https://ajbbents.github.io/portfolio-website/index.html" class="login_btn">Portfolio</a>
+      </div>
+      <div class="details_long">
+        <a href="{% url 'recipes:list' %}" class="login_btn">Back</a>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

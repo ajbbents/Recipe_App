@@ -22,39 +22,26 @@
     <a class="login_btn" href="{%url 'recipes:create' %}">Create</a>
     <a class="login_btn" href="{%url 'recipes:list' %}">Recipes</a>
   </div>
-  <div class="search_results">
-    <h1 class="h1_search_results">Search for recipes by difficulty</h1>
+  <div class="create_block">
 
-    <hr>
-
-    <form action="" method="POST">
+    <h1 class="h1_search_results">Let's add your recipe</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
       {% csrf_token %}
-      {{form}}
-      <button type="submit">Search</button>
+      {{create_form.as_p}}
+      <button type="submit" class="login_btn">Get cooking</button>
     </form>
-
-    <br>
-    {% if recipe_df %}
-    {{recipe_df|safe}}
-    <br>
-    <img src="data:image/png;base64, {{chart|safe}}">
-    {% else %}
-    <h3 class="h1_search_results">No data, whomp whomp.</h3>
-    {% endif %}
-
     <div class="details_long">
       <a href="{% url 'recipes:list' %}" class="login_btn">Back</a>
       <!-- <button onclick="goBack()" class="login_btn">Back</button> -->
     </div>
 
   </div>
+
   <script>
     function goBack() {
       window.history.back();
     }
   </script>
 </body>
-
-
 
 </html>
